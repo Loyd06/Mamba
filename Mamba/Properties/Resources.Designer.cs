@@ -59,5 +59,86 @@ namespace Mamba.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _20415566 {
+            get {
+                object obj = ResourceManager.GetObject("20415566", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _78__Blue_Gaming_Wallpapers_on_WallpaperPlay {
+            get {
+                object obj = ResourceManager.GetObject("78+-Blue-Gaming-Wallpapers-on-WallpaperPlay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap background4 {
+            get {
+                object obj = ResourceManager.GetObject("background4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap desktop_wallpaper_razer_blade_razer_razer_gaming_background_and_razer_snake_razor_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("desktop-wallpaper-razer-blade-razer-razer-gaming-background-and-razer-snake-razor" +
+                        "-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap desktop_wallpaper_razer_gaming_440_01_kb_green_and_black_gaming_thumbnail {
+            get {
+                object obj = ResourceManager.GetObject("desktop-wallpaper-razer-gaming-440-01-kb-green-and-black-gaming-thumbnail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap desktop_wallpaper_snake_game_cool_green_gaming {
+            get {
+                object obj = ResourceManager.GetObject("desktop-wallpaper-snake-game-cool-green-gaming", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap desktop_wallpaper_snake_game_cool_green_gaming1 {
+            get {
+                object obj = ResourceManager.GetObject("desktop-wallpaper-snake-game-cool-green-gaming1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap leather_logo_gaming_series_green_wallpaper_thumb {
+            get {
+                object obj = ResourceManager.GetObject("leather-logo-gaming-series-green-wallpaper-thumb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

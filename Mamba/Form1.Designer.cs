@@ -35,6 +35,7 @@
             txtScore = new Label();
             txtHighScore = new Label();
             gameTimer = new System.Windows.Forms.Timer(components);
+            NvDif = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)picCanvas).BeginInit();
             SuspendLayout();
             // 
@@ -66,7 +67,8 @@
             // 
             // picCanvas
             // 
-            picCanvas.BackColor = SystemColors.ControlDarkDark;
+            picCanvas.BackColor = SystemColors.ActiveBorder;
+            picCanvas.BackgroundImage = Properties.Resources.desktop_wallpaper_snake_game_cool_green_gaming1;
             picCanvas.Location = new Point(21, 21);
             picCanvas.Name = "picCanvas";
             picCanvas.Size = new Size(717, 553);
@@ -78,7 +80,7 @@
             // 
             txtScore.AutoSize = true;
             txtScore.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            txtScore.Location = new Point(774, 229);
+            txtScore.Location = new Point(774, 248);
             txtScore.Name = "txtScore";
             txtScore.Size = new Size(114, 29);
             txtScore.TabIndex = 3;
@@ -88,7 +90,7 @@
             // 
             txtHighScore.AutoSize = true;
             txtHighScore.Font = new Font("Gill Sans Ultra Bold", 12F, FontStyle.Italic, GraphicsUnit.Point);
-            txtHighScore.Location = new Point(774, 265);
+            txtHighScore.Location = new Point(755, 368);
             txtHighScore.Name = "txtHighScore";
             txtHighScore.Size = new Size(147, 29);
             txtHighScore.TabIndex = 4;
@@ -99,11 +101,22 @@
             gameTimer.Interval = 40;
             gameTimer.Tick += GameTimerEvents;
             // 
+            // NvDif
+            // 
+            NvDif.DropDownStyle = ComboBoxStyle.DropDownList;
+            NvDif.FormattingEnabled = true;
+            NvDif.Items.AddRange(new object[] { "EAZY", "MEDIUM", "HARD" });
+            NvDif.Location = new Point(755, 304);
+            NvDif.Name = "NvDif";
+            NvDif.Size = new Size(151, 28);
+            NvDif.TabIndex = 5;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(951, 699);
+            ClientSize = new Size(929, 608);
+            Controls.Add(NvDif);
             Controls.Add(txtHighScore);
             Controls.Add(txtScore);
             Controls.Add(picCanvas);
@@ -126,5 +139,7 @@
         private Label txtScore;
         private Label txtHighScore;
         private System.Windows.Forms.Timer gameTimer;
+        private ComboBox NiveauxDeDifficulté;
+        private ComboBox NvDif;
     }
 }
