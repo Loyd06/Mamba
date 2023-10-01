@@ -76,35 +76,35 @@ namespace Mamba
         private void StartGame(object sender, EventArgs e)
         {
             RestartGame(); //J'exécute la fonction RestartGame 
-            NiveauxDeDifficulte();
+            NiveauxDeDifficulte(); 
         }
 
         private void TakeSnapShot(object sender, EventArgs e)
         {
-            Label caption = new Label();
-            caption.Text = "I scored: " + score + " and my HighScore is " + highScore + " on the Snake Game!!!";
-            caption.Font = new Font("Ariel", 12, FontStyle.Bold);
-            caption.ForeColor = Color.Purple;
+            Label caption = new Label(); //Nouivelle étiquette 
+            caption.Text = "I scored: " + score + " and my HighScore is " + highScore + " on the Snake Game!!!"; //Ceci est le texte du dernier score et highscore que vous avez realisé quand vous prenez un snap shot
+            caption.Font = new Font("Ariel", 12, FontStyle.Bold); //La police du texte
+            caption.ForeColor = Color.Purple; //La couleur de la police
             caption.AutoSize = false;
             caption.Width = picCanvas.Width;
-            caption.TextAlign = ContentAlignment.MiddleCenter;
-            picCanvas.Controls.Add(caption);
+            caption.TextAlign = ContentAlignment.MiddleCenter; //Placement du texte
+            picCanvas.Controls.Add(caption); //Ajout du nouveau texte du nouveau snapshot
 
-            SaveFileDialog dialog = new SaveFileDialog();
+            SaveFileDialog dialog = new SaveFileDialog(); //Ceci est la sauvergade du fichier en JPG et comment est nommé notre fichier
             dialog.FileName = "Snake Game SnapShot";
             dialog.DefaultExt = "jpg";
             dialog.Filter = "JPG Image File | *.jpg";
             dialog.ValidateNames = true;
 
-            if (dialog.ShowDialog() == DialogResult.OK)
+            if (dialog.ShowDialog() == DialogResult.OK) //Ceci est la sauvergade lorsque l'on appuie sur Enregistrer
             {
-                int width = Convert.ToInt32(picCanvas.Width);
-                int height = Convert.ToInt32(picCanvas.Height);
+                int width = Convert.ToInt32(picCanvas.Width); //Taille de l'image (largeur) en 32 Bits 
+                int height = Convert.ToInt32(picCanvas.Height); //Taille de l'image (hauteur) en 32 Bits
 
                 Bitmap bmp = new Bitmap(Width, Height);
                 picCanvas.DrawToBitmap(bmp, new Rectangle(0, 0, width, height));
-                bmp.Save(dialog.FileName, ImageFormat.Jpeg);
-                picCanvas.Controls.Remove(caption);
+                bmp.Save(dialog.FileName, ImageFormat.Jpeg); //Ceci est le fichier enregistré en JPG
+                picCanvas.Controls.Remove(caption); //Ceci est pour que tout ce supprime une fois la zone d'image enregistré afin que nous puissons recommencer à jouer au jeu
 
             }
 
