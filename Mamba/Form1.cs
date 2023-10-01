@@ -230,20 +230,20 @@ namespace Mamba
         {
             Graphics canvas = e.Graphics;
 
-            Brush snakeColour;
+            Brush snakeColour; //Pour attribuer une couleur au serpent
 
             for (int i = 0; i < Snake.Count; i++)
             {
                 if (i == 0)
                 {
-                    snakeColour = Brushes.Black;
+                    snakeColour = Brushes.Black; //Pour définir la couleur de la tête du Snake
                 }
                 else
                 {
-                    snakeColour = Brushes.DarkGoldenrod;
+                    snakeColour = Brushes.DarkGoldenrod; //Pour définir la couleur du corps du Snake
                 }
 
-                canvas.FillEllipse(snakeColour, new Rectangle
+                canvas.FillEllipse(snakeColour, new Rectangle //La couleur pour les cercles du serpent sur la hateur et la largeur
                     (
                     Snake[i].X * Settings.Width,
                     Snake[i].Y * Settings.Height,
@@ -252,7 +252,7 @@ namespace Mamba
 
             }
 
-            canvas.FillEllipse(Brushes.DarkRed, new Rectangle
+            canvas.FillEllipse(Brushes.DarkRed, new Rectangle //La couleur de la pomme sur la hauteur et la largeur
                   (
                   food.X * Settings.Width,
                   food.Y * Settings.Height,
