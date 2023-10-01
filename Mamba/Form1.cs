@@ -158,7 +158,7 @@ namespace Mamba
                 if (i == 0)
                 {
 
-                    switch (Settings.directions)
+                    switch (Settings.directions) //Ceci sont les directions que le serpent peut prendre 
                     {
                         case "left":
                             Snake[i].X--;
@@ -174,7 +174,7 @@ namespace Mamba
                             break;
                     }
 
-                    if (Snake[i].X < 0)
+                    if (Snake[i].X < 0) //Ceci sert à ce que lorsque la tête du Snake va dans un mur (exemple) à droite, elle va sortir du côté opposé donc a gauche
                     {
                         Snake[i].X = maxWidth;
                     }
@@ -188,12 +188,13 @@ namespace Mamba
                     {
                         Snake[i].Y = maxHeight;
                     }
+
                     if (Snake[i].Y > maxHeight)
                     {
                         Snake[i].Y = 0;
                     }
 
-                    if (Snake[i].X == food.X && Snake[i].Y == food.Y)
+                    if (Snake[i].X == food.X && Snake[i].Y == food.Y) //Pour manger la pomme
                     {
                         EatFood();
                     }
@@ -201,7 +202,7 @@ namespace Mamba
                     for (int j = 1; j < Snake.Count; j++)
                     {
 
-                        if (Snake[i].X == Snake[j].X && Snake[i].Y == Snake[j].Y)
+                        if (Snake[i].X == Snake[j].X && Snake[i].Y == Snake[j].Y) //Ceci est quand nous avons perdu
                         {
                             GameOver();
                         }
@@ -214,11 +215,11 @@ namespace Mamba
                 else
                 {
                     Snake[i].X = Snake[i - 1].X;
-                    Snake[i].Y = Snake[i - 1].Y;
+                    Snake[i].Y = Snake[i - 1].Y; //La dernière partie du corps qui va suivre de la List
                 }
 
 
-                picCanvas.Invalidate();
+                picCanvas.Invalidate(); //Cela va tout effacer de la toile et il sera redessiné
 
             }
 
@@ -289,19 +290,19 @@ namespace Mamba
 
         private void EatFood()
         {
-            score += 1;
+            score += 1; //A chaque moment où l'on mange une pomme nous gagnons 1 Point
 
-            txtScore.Text = "Score: " + score;
+            txtScore.Text = "Score: " + score; //Ceci est pour afficher le score
 
-            Circle body = new Circle
+            Circle body = new Circle //Ceci est le calcul pour gagner 1 cercle du corps du Snake
             {
                 X = Snake[Snake.Count - 1].X,
                 Y = Snake[Snake.Count - 1].Y
             };
 
-            Snake.Add(body);
+            Snake.Add(body); //Ajout du corps +1
 
-            food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+            food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) }; //La nouvelle position aléatoire de la prochaine pomme 
 
         }
 
