@@ -1,22 +1,22 @@
 # Mamba
 
-Créer le 25/09/2023
+Créer le 25/09/2023 par Loyd Matthew B2 Informatique Ynov Campus.
 
-25/09
+# 25/09 :
 J'ai commencé a créer mon fichier WFA (Windows Forms Applications) en choisissant de faire le jeu Snake le 25/09.
 J'ai donc commencé par suivre un tuto pour savoir comment faire un jeu Snake en WFA C#, que j'ai suivis tuto jusqu'à la fin.
 
-26/09 et 27/09
+# 26/09 et 27/09 :
 Tout au long du tuto je pensais que quand je push cela marchais alors qu'il n'y avait que la creation du projet qui à été push.
 
-28/09
+# 28/09 :
 Mon Oral du projet Snake que j'ai réalisé.
 
-29/09 et 30/09
+# 29/09 et 30/09 :
 J'ai commencer a intégrer les commentaires dans mon code pour que tout soit clair.
 J'ai donc regarder la vidéo une nouvelle fois pour encore mieux comprendre ce qu'il ce passe dans mon code.
 
-01/10
+# 01/10 :
 Je finis les commentaires et mis de nouveau assets pour le snake et la tête du snake et j'ai changé aussi le background.
 
 J'ai eu un énorme problèmes de Git car je pensais, pendant une semaine, que mon compte était relié car je push mais sa ne push pas et j'ai donc installer Fork le 30/09 
