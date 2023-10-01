@@ -161,16 +161,16 @@ namespace Mamba
                     switch (Settings.directions) //Ceci sont les directions que le serpent peut prendre 
                     {
                         case "left":
-                            Snake[i].X--;
+                            Snake[i].X -= (int)Settings.Speed; // Utiliser la vitesse
                             break;
                         case "right":
-                            Snake[i].X++;
+                            Snake[i].X += (int)Settings.Speed; // Utiliser la vitesse
                             break;
                         case "down":
-                            Snake[i].Y++;
+                            Snake[i].Y += (int)Settings.Speed; // Utiliser la vitesse
                             break;
                         case "up":
-                            Snake[i].Y--;
+                            Snake[i].Y -= (int)Settings.Speed; // Utiliser la vitesse
                             break;
                     }
 
@@ -293,6 +293,8 @@ namespace Mamba
             score += 1; //A chaque moment où l'on mange une pomme nous gagnons 1 Point
 
             txtScore.Text = "Score: " + score; //Ceci est pour afficher le score
+
+            Settings.Speed += 5; //augmenter la vitesse de 5 par pomme manger
 
             Circle body = new Circle //Ceci est le calcul pour gagner 1 cercle du corps du Snake
             {
