@@ -17,7 +17,7 @@ J'ai commencer a intégrer les commentaires dans mon code pour que tout soit cla
 J'ai donc regarder la vidéo une nouvelle fois pour encore mieux comprendre ce qu'il ce passe dans mon code.
 
 01/10
-Je finis les commentaires et met une nouvelle specificité a mon jeu de quand on mange une pomme la vitesse augmente de 5.
+Je finis les commentaires et mis de nouveau assets pour le snake et la tête du snake et j'ai changé aussi le background.
 
 J'ai eu un énorme problèmes de Git car je pensais, pendant une semaine, que mon compte était relié car je push mais sa ne push pas et j'ai donc installer Fork le 30/09 
 et j'ai pu effectuer un commit chose que je ne pouvais pas faire avant.
