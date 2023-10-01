@@ -106,15 +106,16 @@
             NvDif.DropDownStyle = ComboBoxStyle.DropDownList;
             NvDif.FormattingEnabled = true;
             NvDif.Items.AddRange(new object[] { "EAZY", "MEDIUM", "HARD" });
-            NvDif.Location = new Point(755, 304);
+            NvDif.Location = new Point(754, 310);
             NvDif.Name = "NvDif";
-            NvDif.Size = new Size(151, 28);
+            NvDif.Size = new Size(162, 28);
             NvDif.TabIndex = 5;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.WindowFrame;
             ClientSize = new Size(929, 608);
             Controls.Add(NvDif);
             Controls.Add(txtHighScore);

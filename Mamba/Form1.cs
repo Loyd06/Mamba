@@ -76,7 +76,7 @@ namespace Mamba
         private void StartGame(object sender, EventArgs e)
         {
             RestartGame(); //J'exécute la fonction RestartGame 
-            NiveauxDeDifficulte(); 
+            NiveauxDeDifficulte();
         }
 
         private void TakeSnapShot(object sender, EventArgs e)
