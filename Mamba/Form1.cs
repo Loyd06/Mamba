@@ -28,6 +28,11 @@ namespace Mamba
             new Settings(); //Pour appeler la class Settings.
         }
 
+        private void Form1_load(object sender, EventArgs e)
+        {
+            NvDif.SelectedIndex = 0;
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -161,16 +166,16 @@ namespace Mamba
                     switch (Settings.directions) //Ceci sont les directions que le serpent peut prendre 
                     {
                         case "left":
-                            Snake[i].X -= (int)Settings.Speed; // Utiliser la vitesse
+                            Snake[i].X--;
                             break;
                         case "right":
-                            Snake[i].X += (int)Settings.Speed; // Utiliser la vitesse
+                            Snake[i].X++;
                             break;
                         case "down":
-                            Snake[i].Y += (int)Settings.Speed; // Utiliser la vitesse
+                            Snake[i].Y++;
                             break;
                         case "up":
-                            Snake[i].Y -= (int)Settings.Speed; // Utiliser la vitesse
+                            Snake[i].Y--;
                             break;
                     }
 
@@ -231,34 +236,44 @@ namespace Mamba
         {
             Graphics canvas = e.Graphics;
 
-            Brush snakeColour; //Pour attribuer une couleur au serpent
+            Image snakeHead = Properties.Resources.Head;
+            Image snakeBody = Properties.Resources.Body;
+            Image FoodImage = Properties.Resources.Food;
+
+
 
             for (int i = 0; i < Snake.Count; i++)
             {
                 if (i == 0)
                 {
-                    snakeColour = Brushes.Black; //Pour définir la couleur de la tête du Snake
+                    canvas.DrawImage(snakeHead, new Rectangle
+                        (
+                        Snake[i].X * Settings.Width,
+                        Snake[i].Y * Settings.Height,
+                        Settings.Width, Settings.Height
+                        ));//Pour définir la couleur de la tête du Snake
                 }
                 else
                 {
-                    snakeColour = Brushes.DarkGoldenrod; //Pour définir la couleur du corps du Snake
+                    canvas.DrawImage(snakeBody, new Rectangle
+                         (
+                         Snake[i].X * Settings.Width,
+                         Snake[i].Y * Settings.Height,
+                         Settings.Width, Settings.Height
+                         ));//Pour définir la couleur du corps du Snake
                 }
 
-                canvas.FillEllipse(snakeColour, new Rectangle //La couleur pour les cercles du serpent sur la hateur et la largeur
-                    (
-                    Snake[i].X * Settings.Width,
-                    Snake[i].Y * Settings.Height,
-                    Settings.Width, Settings.Height
-                    ));
+
+
 
             }
 
-            canvas.FillEllipse(Brushes.DarkRed, new Rectangle //La couleur de la pomme sur la hauteur et la largeur
-                  (
-                  food.X * Settings.Width,
-                  food.Y * Settings.Height,
-                  Settings.Width, Settings.Height
-                  ));
+            canvas.DrawImage(FoodImage, new Rectangle
+                    (
+                    food.X * Settings.Width,
+                    food.Y * Settings.Height,
+                    Settings.Width, Settings.Height
+                    ));
         }
 
         private void RestartGame()
@@ -294,7 +309,6 @@ namespace Mamba
 
             txtScore.Text = "Score: " + score; //Ceci est pour afficher le score
 
-            Settings.Speed += 5; //augmenter la vitesse de 5 par pomme manger
 
             Circle body = new Circle //Ceci est le calcul pour gagner 1 cercle du corps du Snake
             {

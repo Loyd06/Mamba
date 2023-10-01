@@ -12,8 +12,6 @@ namespace Mamba
         public static int Width { get; set; }
         public static int Height { get; set; }
 
-        public static double Speed { get; set; } = 1.0;
-
         public static string? directions;
 
         public Settings() //dans ce constructeur chaque élément que nous avons créer sont de 16 de hauteur * 16 de largeur

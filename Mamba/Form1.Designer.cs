@@ -68,8 +68,8 @@
             // picCanvas
             // 
             picCanvas.BackColor = SystemColors.ActiveBorder;
-            picCanvas.BackgroundImage = Properties.Resources.desktop_wallpaper_snake_game_cool_green_gaming1;
-            picCanvas.Location = new Point(21, 21);
+            picCanvas.BackgroundImage = Properties.Resources.damier;
+            picCanvas.Location = new Point(12, 21);
             picCanvas.Name = "picCanvas";
             picCanvas.Size = new Size(717, 553);
             picCanvas.TabIndex = 2;
