@@ -308,11 +308,11 @@ namespace Mamba
 
         private void GameOver()
         {
-            gameTimer.Stop();
-            startButton.Enabled = true;
-            snapButton.Enabled = true;
+            gameTimer.Stop(); //Lorsqu'on a perdu le GameTimer ce stop
+            startButton.Enabled = true; //Le boutton est accessible
+            snapButton.Enabled = true; //Le boutton est accessible
 
-            if (score > highScore)
+            if (score > highScore) //Ceci est le calcul du HighScore, le score devient mon highsocre quand je meurs et quand je revis j'ai toujours mon highscore de mon ancienne mort donc je peut faire mieu sur lautre partie et si je fais le highscore s'actualise
             {
                 highScore = score;
 
