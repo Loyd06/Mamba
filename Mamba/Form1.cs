@@ -112,18 +112,18 @@ namespace Mamba
 
         }
 
-        private void NiveauxDeDifficulte()
+        private void NiveauxDeDifficulte() //Ceci est le niveaux de difficulté pour etre en Facil, Normal, Difficile
         {
 
-            if (NvDif.SelectedIndex == 0)
+            if (NvDif.SelectedIndex == 0) //Facile
             {
                 gameTimer.Interval = 60;
             }
-            if (NvDif.SelectedIndex == 1)
+            if (NvDif.SelectedIndex == 1) //Normal
             {
                 gameTimer.Interval = 40;
             }
-            if (NvDif.SelectedIndex == 2)
+            if (NvDif.SelectedIndex == 2) //Difficile
             {
                 gameTimer.Interval = 20;
             }
